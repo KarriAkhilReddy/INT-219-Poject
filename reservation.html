@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/mehfillogo.png" type="image/x-icon">
+    <title>Mehfil</title>
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+    <form action="reservation.php" method="post">
+        <div class="elem-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="visitor_name" placeholder="Akhil Reddy" pattern=[A-Z\sa-z]{3,20} required>
+        </div>
+        <div class="elem-group">
+            <label for="email">Your E-mail</label>
+            <input type="email" id="email" name="visitor_email" placeholder="akhil@gmail.com" required>
+        </div>
+        <div class="elem-group">
+            <label for="phone">Your Phone</label>
+            <input type="tel" id="phone" name="visitor_phone" placeholder="8179976654" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+        </div>
+        <div class="elem-group inlined">
+            <label for="Customers">No of Customers</label>
+            <input type="number" id="Customers" name="total_customers" placeholder="2" min="1" required>
+        </div>
+        <div class="elem-group inlined">
+            <label for="checkin-date">Check-in Date</label>
+            <input type="date" id="checkin-date" name="checkin" required>
+        </div>
+        </div>
+        <div class="elem-group">
+            <label for="message">Anything Else?</label>
+            <textarea id="message" name="visitor_message" placeholder="Tell us anything else." required></textarea>
+        </div>
+        <button type="submit">Book Table</button>
+    </form>
+</body>
+</html>
